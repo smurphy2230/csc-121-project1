@@ -22,6 +22,7 @@ def main():
             print("program exited")
             print()
             break
+
         else:
             # calls login function
             identify = login(id, student_list)
