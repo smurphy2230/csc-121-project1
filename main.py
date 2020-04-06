@@ -23,34 +23,39 @@ def main():
             print()
             break
         else:
+            # calls login function
             identify = login(id, student_list)
+            # boolean if true
             if identify:
                 print("login successful")
                 choice = int(input(
                     "Enter 1 to add course, 2 to drop course, 3 to list current courses, 0 to exit program: "))
                 while choice in (1, 2, 3):
                     if choice == 1:
+                        # call add_course function from student.py
                         student.add_course(
                             id, course_list, roster_list, max_size_list)
                         choice = int(input(
                             "Enter 1 to add course, 2 to drop course, 3 to list current courses, 0 to exit program: "))
 
                     elif choice == 2:
+                        # call drop_course function from student.py
                         student.drop_course(id, course_list, roster_list)
                         choice = int(input(
                             "Enter 1 to add course, 2 to drop course, 3 to list current courses, 0 to exit program: "))
 
                     elif choice == 3:
+                        # call list_courses function from student.py
                         student.list_courses(id, course_list, roster_list)
                         choice = int(input(
                             "Enter 1 to add course, 2 to drop course, 3 to list current courses, 0 to exit program: "))
                 if choice == 0:
-                    print("program exited")
+                    print("session ended")
                     print()
 
-                else:
-                    print("login credentials incorrect")
-                    print()
+            else:
+                print("login credentials incorrect")
+                print()
 
 
 def login(id, s_list):
