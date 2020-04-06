@@ -1,5 +1,8 @@
 # ----------------------------------------------------------------------------
-# This program creates a course registration system. It allows students to add # and drop courses. It also lists courses students are registered for.
+#  Author: Steven Murphy
+#  Date: 6 April, 2020
+#
+#  This program creates a course registration system. It allows students to add # and drop courses. It also lists courses students are #  #  registered for.
 # ----------------------------------------------------------------------------
 
 import student
